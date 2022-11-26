@@ -1,0 +1,60 @@
+                        <div class="tm-welcome-left">
+                            <h2 class="tm-welcome-title">گیت چیست</h2>
+                            <p class="pb-0">
+                                گیت (به انگلیسی: Git) یک نرم‌افزار کنترل نسخه و از مدل نرم‌افزارهای آزاد و متن‌باز برای
+                                بازنگری کد منبع توزیع شده و مدیریت منبع کد است که برای دنبال کردن تغییر فایل‌های
+                                کامپیوتری و دنبال کردن کارهای انجام شده روی آن‌ها توسط افراد مختلف است. هدف اولیه این
+                                نرم‌افزار برای استفاده در پروژه‌های نرم‌افزاری بوده‌است ولی می‌توان از آن تنها برای
+                                دنبال کردن تغییر فایل‌ها هم استفاده کرد.
+                                <br />
+                                گیت ابتدا برای توسعهٔ لینوکس توسط لینوس تروالدز به وجود آمد و اکنون پروژه‌های فراوانی از
+                                آن الهام گرفته‌اند. هر دایرکتوری کاری در گیت یک مخزن کامل با تاریخچهٔ کامل تغییرها و
+                                قابلیت بازنگری آن‌ها است و برای کار با آن نیازی به دسترسی به شبکه یا سرور مرکزی وجود
+                                ندارد.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Welcome section -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script>
+        function detectMsBrowser() {
+            using_ms_browser =
+                navigator.appName == "Microsoft Internet Explorer" ||
+                (navigator.appName == "Netscape" &&
+                    navigator.appVersion.indexOf("Edge") > -1) ||
+                (navigator.appName == "Netscape" &&
+                    navigator.appVersion.indexOf("Trident") > -1);
+
+            if (using_ms_browser == true) {
+                alert(
+                    "Please use Chrome or Firefox for the best browsing experience!"
+                );
+            }
+        }
+        function setBrandMarginTop() {
+            var bottomContainerHeight = $(".tm-welcome-container").height();
+
+            $(".tm-brand-container-outer").css({
+                "margin-top": -bottomContainerHeight + "px"
+            });
+        }
+
+        $(function () {
+            setBrandMarginTop();
+            detectMsBrowser();
+
+            // Handle window resize event
+            $(window).resize(function () {
+                setBrandMarginTop();
+            });
+        });
+    </script>
+</body>
+
+</html>
